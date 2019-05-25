@@ -43,7 +43,7 @@
 				<div class="header-wrap">
 					<div class="header-top d-flex justify-content-between align-items-center">
 						<div class="banner-content">
-							<a href=""onclick="window.location.href ='#home'; removeHash();"><h3>supervised.io</h3></a>
+							<a href=""onclick="window.location.href ='#home'; removeHash();"><h3>Artworks Classifier</h3></a>
 						</div>
 						<div class="main-menubar d-flex align-items-center">
 							<nav class="hide">
@@ -68,11 +68,13 @@
 							<p>Artworks classification using Deep Learning</p>
 							<!-- <a href="#analyzer" class="primary-btn">Analyze<span class="lnr lnr-arrow-right"></span></a> -->
 							<div class="wrapper">
+								<div class="file-uplaod">
 									<form method="POST" enctype="multipart/form-data">
 										{% csrf_token %}
-										<input type="file" name="input-file">
-										<button type="submit">Upload file</button>
+										<input type="file" name="input-file"/>
+										<button type="submit" class="primary-btn">Analyze</button>
 									</form>
+								</div>
 							</div>												
 						</div>
 					</div>

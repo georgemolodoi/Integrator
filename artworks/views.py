@@ -113,7 +113,8 @@ loop.close()
 #         # Get probabilities for predictions
 #         probs = [y for x in predictions for y in x if type(y) is float]
 
-#         context = {'name': cleanedNeams, 'probs': probs}
+#         context = zip(cleanedNeams, probs)
+#         print(context)
 
 #         return render(request, 'artworks/result.html', context)
 
@@ -135,9 +136,14 @@ def index(request):
 
         # Get probabilities for predictions
         probs = [y for x in predictions for y in x if type(y) is float]
+        goodProbs = [x*100 for x in probs]
+        
+        results = zip(cleanedNeams, goodProbs)
+        
+        print(goodProbs)
 
-        context = {'name': cleanedNeams, 'probs': probs}
-
+        context = {'results': results}
+     
         return render(request, 'artworks/result.html', context)
     return render(request, 'artworks/index.html')
 

@@ -48,7 +48,7 @@
 				<div class="header-wrap">
 					<div class="header-top d-flex justify-content-between align-items-center">
 						<div class="banner-content">
-							<a href=""onclick="window.location.href ='#home'; removeHash();"><h3>supervised.io</h3></a>
+							<a href=""onclick="window.location.href ='#home'; removeHash();"><h3>Artworks Classifier</h3></a>
 						</div>
 						<div class="main-menubar d-flex align-items-center">
 							<nav class="hide">
@@ -63,27 +63,30 @@
 		<!-- End Header Area -->
 
 		<!-- Start Banner Area -->
-		<section class="banner-area relative" id="#home">
-			<div class="overlay overlay-bg"></div>
-			<div class="container">
-				<div class="row fullscreen align-items-center justify-content-between">
-					<div class="col-lg-6 col-md-7 col-sm-8">
-						<div class="banner-content">
-							<h1>The painter is <br> {name}</h1>
-							<p>Artworks classification using Deep Learning</p>
-							<!-- <a href="#analyzer" class="primary-btn">Analyze<span class="lnr lnr-arrow-right"></span></a> -->
-							<div class="wrapper">
-							</div>												
+		<!-- Start Skill Area -->
+		<section class="section-gap skill-area" id="show-results">
+				<div class="container">
+					<div class="row justify-content-between">
+						<div class="col-lg-5">
+							<div class="skill-content">
+								<h2>Predictions</h2>
+								<p class="mb-30">The top 3 most probable painters are: </p>
+								<!-- <a href="#" class="primary-btn">View More<span class="lnr lnr-arrow-right"></span></a> -->
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="total-progress-bar">
+								{% for name, prob in results %}
+								<h5><p id="result-label">{{name}}</p></h5>
+								<div class="single-progressbar mb-20">
+									<div id="pb" class="progress-bar" role="progressbar" style="width: {{prob}}%;"></div>
+								</div>
+								{% endfor %}
+							</div>
 						</div>
 					</div>
-					<div class="col-lg-5 col-md-5 col-sm-4">
-						<img src="../static/img/banner.png" alt="" class="img-fluid">
-					</div>
-					<h1>{{  probs }}</h1>
 				</div>
-			</div>
-		</section>
-		<!-- End Banner Area -->
+			</section>
 
 		
 		<script src="../static/js/vendor/jquery-2.2.4.min.js"></script>
