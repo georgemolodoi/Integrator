@@ -98,32 +98,8 @@ learn = loop.run_until_complete(asyncio.gather(*tasks))[0]
 loop.close()
 
 
-# async def analyze(request):
-#     if request.method == 'POST':
-#         file_ = await request.FILES['input-file']
-#         imgBytes = await file_.read()
-#         img = open_image(BytesIO(imgBytes))
-
-#         # Get the first 3 predictions 
-#         _,_, losses = learn.predict(img)
-#         predictions = sorted(zip(CLASSES, map(float, losses)), key=lambda p: p[1], reverse=True)[0:3]
-
-#         # Cleaning categories names
-#         names = [y for x in predictions for y in x if type(y) is str]
-#         cleanedNeams = list(map(lambda s: str(s).replace("_", " "), names))
-
-#         # Get probabilities for predictions
-#         probs = [y for x in predictions for y in x if type(y) is float]
-
-#         context = zip(cleanedNeams, probs)
-#         print(context)
-
-#         return render(request, 'artworks/result.html', context)
-
-
-def index(request):
+def analyze(request):
     if request.method == 'POST':
-        print('Yellow')
         file_ = request.FILES['myfile']
         imgBytes =  file_.read()
         img = open_image(BytesIO(imgBytes))
@@ -139,14 +115,19 @@ def index(request):
         # Get probabilities for predictions
         probs = [y for x in predictions for y in x if type(y) is float]
         goodProbs = [x*100 for x in probs]
-        
+
         results = zip(cleanedNeams, goodProbs)
-        
-        print(goodProbs)
 
         context = {'results': results}
         return render(request, 'artworks/result.html', context)
-    print('No')
+
     return render(request, 'artworks/index.html')
+
+
+# def index(request):
+#     if request.method =='POST':
+#         analyze(request)
+#     if request.method == 'GET':
+#         return render(request, 'artworks/index.html')
 
 

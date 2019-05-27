@@ -2153,6 +2153,10 @@ nav a:hover {
   color: #2e9cca;
 }
 
+.form-submit-button {
+  display: none;
+}
+
 
 
 
