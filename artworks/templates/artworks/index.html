@@ -68,24 +68,51 @@
 							<p>Artworks classification using Deep Learning</p>
 							<!-- <a href="#analyzer" class="primary-btn">Analyze<span class="lnr lnr-arrow-right"></span></a> -->
 							<div class="wrapper">
-								<div class="file-uplaod">
-									<form method="POST" enctype="multipart/form-data">
-										{% csrf_token %}
-										<input type="file" name="input-file"/>
-										<button type="submit" class="primary-btn">Analyze</button>
-									</form>
-								</div>
+									<div class="file-upload">
+									  <input id='file-input' type="file" onchange="window.location.href ='#analyze'; removeHash();"/>
+									  <i class="fa fa-arrow-up" style="font-size:20px; color:#25274D;"></i>
+									</div>
 							</div>												
 						</div>
 					</div>
 					<div class="col-lg-5 col-md-5 col-sm-4">
 						<img src="../static/img/banner.png" alt="" class="img-fluid">
 					</div>
-					<h1>{{  probs }}</h1>
 				</div>
 			</div>
 		</section>
 		<!-- End Banner Area -->
+
+	<!-- Start Carousel Area -->
+		<section class="section-gap carousel-area" id ="analyze">
+			<div class="overlay overlay-bg"></div>
+			<div class="active-bottle-carousel">
+				<div class="item">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-xl-6 col-md-4">
+								<div class="carousel-thumb">
+									<img src="" alt="" id="profile-img-tag" class="img-fluid2">
+								</div>
+							</div>
+							<div class="col-xl-6 col-md-7">
+								<div class="carousel-content">
+									<h2 class="text-white">Image Classifier</h2>
+									<h5 class="text-white mb-20">with Convolutional Neural Networks</h5>
+									<p class="text-white mb-30">Using the RESNET50 architecture we trained a model on a dataset composed by artworks of the most famous 50 painters.</p>
+									<!-- <a href="#" class="primary-btn white">View More<span class="lnr lnr-arrow-right"></span></a> -->
+									<!-- <button id='analyze-button' class="primary-btn white" type='submit' onclick='analyze(); removeHash(); window.location.href="result.html" '; >Analyze<span class="lnr lnr-arrow-right"></span></a> -->
+									<button id='analyze-button' class="primary-btn white" type='submit'>Analyze<span class="lnr lnr-arrow-right"></span></a>
+									</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- End Carousel Area -->
+
+
 
 		
 		<script src="../static/js/vendor/jquery-2.2.4.min.js"></script>

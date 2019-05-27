@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.core.files.storage import FileSystemStorage
 
+from django.views.decorators.csrf import csrf_exempt
+
 from io import BytesIO
 import aiohttp, asyncio
 
@@ -119,10 +121,10 @@ loop.close()
 #         return render(request, 'artworks/result.html', context)
 
 
-
 def index(request):
     if request.method == 'POST':
-        file_ = request.FILES['input-file']
+        print('Yellow')
+        file_ = request.FILES['file-input']
         imgBytes =  file_.read()
         img = open_image(BytesIO(imgBytes))
 
@@ -143,8 +145,8 @@ def index(request):
         print(goodProbs)
 
         context = {'results': results}
-     
         return render(request, 'artworks/result.html', context)
+    print('No')
     return render(request, 'artworks/index.html')
 
 

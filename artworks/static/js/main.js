@@ -1,3 +1,29 @@
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function (e) {
+      $('#profile-img-tag').attr('src', e.target.result);
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+$("#file-input").change(function(){
+  readURL(this);
+});
+
+
+// function formSubmit () {
+  
+//   var frm = document.getElementById("image-form");
+
+//   if ("analyze-button").onclick();{
+//     frm.submit()
+//   }};
+  
+//   window.onload = formSubmit;
+
+
 
 $(document).ready(function(){
 	"use strict";
@@ -30,14 +56,6 @@ $(document).ready(function(){
         }
     });
 
-    $('.active-bottle-carousel').owlCarousel({
-        items:1,
-        loop:true,
-        nav: false,
-        autoplay: true,
-        autoplayTimeout:3000,
-        autoplayHoverPause:true
-    });
 
     $('.play-btn').magnificPopup({
         disableOn: 700,
