@@ -124,7 +124,7 @@ loop.close()
 def index(request):
     if request.method == 'POST':
         print('Yellow')
-        file_ = request.FILES['file-input']
+        file_ = request.FILES['myfile']
         imgBytes =  file_.read()
         img = open_image(BytesIO(imgBytes))
 

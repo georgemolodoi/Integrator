@@ -13,16 +13,10 @@ $("#file-input").change(function(){
 });
 
 
-// function formSubmit () {
-  
-//   var frm = document.getElementById("image-form");
-
-//   if ("analyze-button").onclick();{
-//     frm.submit()
-//   }};
-  
-//   window.onload = formSubmit;
-
+$("#analyze-button").click(function(e) {
+  e.preventDefault();
+  $("[name='formSubmit']").click();
+});
 
 
 $(document).ready(function(){

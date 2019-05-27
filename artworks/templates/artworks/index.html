@@ -67,12 +67,17 @@
 							<h1>Who is the <br> painter?</h1>
 							<p>Artworks classification using Deep Learning</p>
 							<!-- <a href="#analyzer" class="primary-btn">Analyze<span class="lnr lnr-arrow-right"></span></a> -->
-							<div class="wrapper">
-									<div class="file-upload">
-									  <input id='file-input' type="file" onchange="window.location.href ='#analyze'; removeHash();"/>
-									  <i class="fa fa-arrow-up" style="font-size:20px; color:#25274D;"></i>
+							<form method="post" enctype="multipart/form-data">
+								{% csrf_token %}
+									<div class="wrapper">
+											<div class="file-upload">
+												<input id='file-input' name='myfile' type="file" onchange="window.location.href ='#analyze'; removeHash();"/>
+												<i class="fa fa-arrow-up" style="font-size:20px; color:#25274D;"></i>
+											</div>
+											<button type="submit" name="formSubmit"></button>
 									</div>
-							</div>												
+							</form>
+																			
 						</div>
 					</div>
 					<div class="col-lg-5 col-md-5 col-sm-4">
