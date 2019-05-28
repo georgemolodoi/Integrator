@@ -110,24 +110,15 @@ def analyze(request):
 
         # Cleaning categories names
         names = [y for x in predictions for y in x if type(y) is str]
-        cleanedNeams = list(map(lambda s: str(s).replace("_", " "), names))
+        cleanedNames = list(map(lambda s: str(s).replace("_", " "), names))
 
         # Get probabilities for predictions
         probs = [y for x in predictions for y in x if type(y) is float]
         goodProbs = [x*100 for x in probs]
 
-        results = zip(cleanedNeams, goodProbs)
+        results = zip(cleanedNames, goodProbs)
 
         context = {'results': results}
         return render(request, 'artworks/result.html', context)
 
     return render(request, 'artworks/index.html')
-
-
-# def index(request):
-#     if request.method =='POST':
-#         analyze(request)
-#     if request.method == 'GET':
-#         return render(request, 'artworks/index.html')
-
-

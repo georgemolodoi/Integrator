@@ -1,131 +1,30 @@
-<!DOCTYPE html>
-<html lang="zxx" class="no-js">
-<head>
-	<!-- Mobile Specific Meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- Favicon-->
-	<link rel="shortcut icon" href="static/img/fav.png">
-	<!-- Author Meta -->
-	<meta name="author" content="CodePixar">
-	<!-- Meta Description -->
-	<meta name="description" content="">
-	<!-- Meta Keyword -->
-	<meta name="keywords" content="">
-	<!-- meta character set -->
-	<meta charset="UTF-8">
-	<!-- Site Title -->
-	<title>Artworks classifier</title>
+{% extends 'artworks/base.html' %}
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
-		<!--CSS ============================================= -->
-		<link rel="stylesheet" href="../static/css/linearicons.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">	
-		<link rel="stylesheet" href="../static/css/font-awesome.min.css">
-		<link rel="stylesheet" href="../static/css/nice-select.css">
-		<link rel="stylesheet" href="../static/css/magnific-popup.css">
-		<link rel="stylesheet" href="../static/css/bootstrap.css">
-		<link rel="stylesheet" href="../static/css/main.css">
+{% block site-title %} Artworks Classifier {% endblock %}
+{% block page-title %} Artworks Classifier {% endblock %}
 
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="../static/js/jquery-2.1.4.min.js"></script>
-		<script src='../static/js/client.js'></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-	
-	</head>
-
-	<body class="dup-body">
-		<!-- Return to Top -->
-		<a id="top-button"></a>
-		<div class="dup-body-wrap">
-			<!-- Start Header Area -->
-			<header class="default-header">
-				<div class="header-wrap">
-					<div class="header-top d-flex justify-content-between align-items-center">
-						<div class="banner-content">
-							<a href=""onclick="window.location.href ='#home'; removeHash();"><h3>Artworks Classifier</h3></a>
-						</div>
-						<div class="main-menubar d-flex align-items-center">
-							<nav class="hide">
-								<a href="" onclick="window.location.href ='#home'; removeHash();">Home</a>
-								<a href="">Learn more</a>
-							</nav>
-							<div class="menu-bar"><span class="lnr lnr-menu"></span></div>
-						</div>
-					</div>
+{%  block banner-content %}
+<h1>Who is the <br> painter?</h1>
+<p>Artworks classification using Deep Learning</p>
+<!-- <a href="#analyzer" class="primary-btn">Analyze<span class="lnr lnr-arrow-right"></span></a> -->
+<form method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+		<div class="wrapper">
+				<div class="file-upload">
+					<input id='file-input' name='myfile' type="file" onchange="window.location.href ='#analyze'; removeHash();"/>
+					<i class="fa fa-arrow-up" style="font-size:20px; color:#25274D;"></i>
 				</div>
-			</header>
-		<!-- End Header Area -->
+				<button class="form-submit-button" type="submit" name="formSubmit"></button>
+		</div>
+</form>
+{% endblock %}
+																		
 
-		<!-- Start Banner Area -->
-		<section class="banner-area relative" id="#home">
-			<div class="overlay overlay-bg"></div>
-			<div class="container">
-				<div class="row fullscreen align-items-center justify-content-between">
-					<div class="col-lg-6 col-md-7 col-sm-8">
-						<div class="banner-content">
-							<h1>Who is the <br> painter?</h1>
-							<p>Artworks classification using Deep Learning</p>
-							<!-- <a href="#analyzer" class="primary-btn">Analyze<span class="lnr lnr-arrow-right"></span></a> -->
-							<form method="post" enctype="multipart/form-data">
-								{% csrf_token %}
-									<div class="wrapper">
-											<div class="file-upload">
-												<input id='file-input' name='myfile' type="file" onchange="window.location.href ='#analyze'; removeHash();"/>
-												<i class="fa fa-arrow-up" style="font-size:20px; color:#25274D;"></i>
-											</div>
-											<button class="form-submit-button" type="submit" name="formSubmit"></button>
-									</div>
-							</form>
-																			
-						</div>
-					</div>
-					<div class="col-lg-5 col-md-5 col-sm-4">
-						<img src="../static/img/banner.png" alt="" class="img-fluid">
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Banner Area -->
-
-	<!-- Start Carousel Area -->
-		<section class="section-gap carousel-area" id ="analyze">
-			<div class="overlay overlay-bg"></div>
-			<div class="active-bottle-carousel">
-				<div class="item">
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-xl-6 col-md-4">
-								<div class="carousel-thumb">
-									<img src="" alt="" id="profile-img-tag" class="img-fluid2">
-								</div>
-							</div>
-							<div class="col-xl-6 col-md-7">
-								<div class="carousel-content">
-									<h2 class="text-white">Image Classifier</h2>
-									<h5 class="text-white mb-20">with Convolutional Neural Networks</h5>
-									<p class="text-white mb-30">Using the RESNET50 architecture we trained a model on a dataset composed by artworks of the most famous 50 painters.</p>
-									<!-- <a href="#" class="primary-btn white">View More<span class="lnr lnr-arrow-right"></span></a> -->
-									<!-- <button id='analyze-button' class="primary-btn white" type='submit' onclick='analyze(); removeHash(); window.location.href="result.html" '; >Analyze<span class="lnr lnr-arrow-right"></span></a> -->
-									<button id='analyze-button' class="primary-btn white" type='submit'>Analyze<span class="lnr lnr-arrow-right"></span></a>
-									</div>
-							</div>
-						</div>	
-					</div>
-				</div>
-			</div>
-		</section>
-	<!-- End Carousel Area -->
-
-
-
-		
-		<script src="../static/js/vendor/jquery-2.2.4.min.js"></script>
-		<!-- <script src="../https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
-		<script src="../static/js/vendor/bootstrap.min.js"></script>
-		<script src="../static/js/jquery.ajaxchimp.min.js"></script>
-		<script src="../static/js/jquery.nice-select.min.js"></script>
-		<script src="../static/js/jquery.magnific-popup.min.js"></script>
-		<script src="../static/js/main.js"></script>
-	</body>
-</html>
+{% block carousel-content %}
+<h2 class="text-white">Image Classifier</h2>
+<h5 class="text-white mb-20">with Convolutional Neural Networks</h5>
+<p class="text-white mb-30">Using the RESNET50 architecture we trained a model on a dataset composed by artworks of the most famous 50 painters.</p>
+<!-- <a href="#" class="primary-btn white">View More<span class="lnr lnr-arrow-right"></span></a> -->
+<!-- <button id='analyze-button' class="primary-btn white" type='submit' onclick='analyze(); removeHash(); window.location.href="result.html" '; >Analyze<span class="lnr lnr-arrow-right"></span></a> -->
+<button id='analyze-button' class="primary-btn white" type='submit'>Analyze<span class="lnr lnr-arrow-right"></span></a>
+{% endblock %}

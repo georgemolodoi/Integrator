@@ -1,100 +1,40 @@
-<!DOCTYPE html>
-<html lang="zxx" class="no-js">
-<head>
-	<!-- Mobile Specific Meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- Favicon-->
-	<link rel="shortcut icon" href="static/img/fav.png">
-	<!-- Author Meta -->
-	<meta name="author" content="CodePixar">
-	<!-- Meta Description -->
-	<meta name="description" content="">
-	<!-- Meta Keyword -->
-	<meta name="keywords" content="">
-	<!-- meta character set -->
-	<meta charset="UTF-8">
-	<!-- Site Title -->
-	<title>Artworks classifier</title>
+{% extends 'artworks/base-result.html' %}
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
-		<!--CSS ============================================= -->
-		<link rel="stylesheet" href="../static/css/linearicons.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">	
-		<link rel="stylesheet" href="../static/css/font-awesome.min.css">
-		<link rel="stylesheet" href="../static/css/nice-select.css">
-		<link rel="stylesheet" href="../static/css/magnific-popup.css">
-		<link rel="stylesheet" href="../static/css/bootstrap.css">
-		<link rel="stylesheet" href="../static/css/main.css">
+{% block site-title %} Artworks Classifier {% endblock %}
 
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="../static/js/jquery-2.1.4.min.js"></script>
-		<script src='../static/js/client.js'></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-	
-	</head>
-	<body class="dup-body">
-			<div id="preloader">
-					<div id="preloader_spinner">
-						<div class="triple-spinner"></div>
+{% block preloder %} 
+<div id="preloader">
+	<div id="preloader_spinner">
+		<div class="triple-spinner"></div>
+	</div>
+</div>
+{% endblock %}
+
+{% block page-title %} Artworks Classifier {% endblock %}
+
+{% block results %}
+<section class="section-gap skill-area" id="show-results">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-lg-5">
+					<div class="skill-content">
+						<h2>Predictions</h2>
+						<p class="mb-30">The top 3 most probable painters are: </p>
+						<!-- <a href="#" class="primary-btn">View More<span class="lnr lnr-arrow-right"></span></a> -->
 					</div>
 				</div>
-
-		<!-- Return to Top -->
-		<a id="top-button"></a>
-		<div class="dup-body-wrap">
-			<!-- Start Header Area -->
-			<header class="default-header">
-				<div class="header-wrap">
-					<div class="header-top d-flex justify-content-between align-items-center">
-						<div class="banner-content">
-							<a href=""onclick="window.location.href ='#home'; removeHash();"><h3>Artworks Classifier</h3></a>
+				<div class="col-lg-6">
+					<div class="total-progress-bar">
+						{% for name, prob in results %}
+						<h5><p id="result-label">{{name}}</p></h5>
+						<div class="single-progressbar mb-20">
+							<div id="pb" class="progress-bar" role="progressbar" style="width: {{prob}}%;"></div>
 						</div>
-						<div class="main-menubar d-flex align-items-center">
-							<nav class="hide">
-								<a href="" onclick="window.location.href ='#home'; removeHash();">Home</a>
-								<a href="">Learn more</a>
-							</nav>
-							<div class="menu-bar"><span class="lnr lnr-menu"></span></div>
-						</div>
+						{% endfor %}
 					</div>
 				</div>
-			</header>
-		<!-- End Header Area -->
+			</div>
+		</div>
+	</section>
+{% endblock %}
 
-		<!-- Start Banner Area -->
-		<!-- Start Skill Area -->
-		<section class="section-gap skill-area" id="show-results">
-				<div class="container">
-					<div class="row justify-content-between">
-						<div class="col-lg-5">
-							<div class="skill-content">
-								<h2>Predictions</h2>
-								<p class="mb-30">The top 3 most probable painters are: </p>
-								<!-- <a href="#" class="primary-btn">View More<span class="lnr lnr-arrow-right"></span></a> -->
-							</div>
-						</div>
-						<div class="col-lg-6">
-							<div class="total-progress-bar">
-								{% for name, prob in results %}
-								<h5><p id="result-label">{{name}}</p></h5>
-								<div class="single-progressbar mb-20">
-									<div id="pb" class="progress-bar" role="progressbar" style="width: {{prob}}%;"></div>
-								</div>
-								{% endfor %}
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-		
-		<script src="../static/js/vendor/jquery-2.2.4.min.js"></script>
-		<!-- <script src="../https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
-		<script src="../static/js/vendor/bootstrap.min.js"></script>
-		<script src="../static/js/jquery.ajaxchimp.min.js"></script>
-		<script src="../static/js/jquery.nice-select.min.js"></script>
-		<script src="../static/js/jquery.magnific-popup.min.js"></script>
-		<script src="../static/js/main.js"></script>
-	</body>
-</html>
