@@ -122,3 +122,18 @@ def analyze(request):
         return render(request, 'artworks/result.html', context)
 
     return render(request, 'artworks/index.html')
+
+# def index(request):
+#     IMAGE_PATH = PATH / 'media/ArtistsOverview'
+#     paths = IMAGE_PATH.glob('**/*.jpg')
+    
+#     artists = []
+#     for f in paths:
+#         artists.append(f)
+
+#     paths = zip(list(paths), artists)
+#     context = {'paths': paths}
+#     print(context)
+#     return render(request, 'artworks/index.html', context)
+
+

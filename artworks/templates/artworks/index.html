@@ -28,3 +28,21 @@
 <!-- <button id='analyze-button' class="primary-btn white" type='submit' onclick='analyze(); removeHash(); window.location.href="result.html" '; >Analyze<span class="lnr lnr-arrow-right"></span></a> -->
 <button id='analyze-button' class="primary-btn white" type='submit'>Analyze<span class="lnr lnr-arrow-right"></span></a>
 {% endblock %}
+
+
+{% block slideshow %}
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+		  <div class="carousel-item active">
+			  <img src="../media/ArtistsOverview/Caravaggio.jpg" class="img-fluid2" alt="...">
+		  </div>
+		  <div class="carousel-item">
+			<img src="./media/ArtistsOverview/El_Greco.jpg" class="img-fluid2" alt="...">
+		  </div>
+		  <div class="carousel-item">
+			<img src="./media/ArtistsOverview/Raphael.jpg" class="img-fluid2" alt="...">
+		  </div>
+		</div>
+	  </div>
+{% endblock %}
