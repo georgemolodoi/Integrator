@@ -1,3 +1,23 @@
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function (e) {
+      $('#profile-img-tag').attr('src', e.target.result);
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+$("#file-input").change(function(){
+  readURL(this);
+});
+
+
+$("#analyze-button").click(function(e) {
+  e.preventDefault();
+  $("[name='formSubmit']").click();
+});
+
 
 $(document).ready(function(){
 	"use strict";
@@ -75,7 +95,7 @@ btn.on('click', function(e) {
 
     // preloader js
     $(window).on('load', function() { // makes sure the whole site is loaded
-      $('#preloader_spinner').delay(100); // will first fade out the loading animation
-      $('#preloader').delay(100); // will fade out the white DIV that covers the website.
-      $('dup-body').delay(100).css({'overflow':'visible'});
+      $('#preloader_spinner').delay(1500).fadeOut(); // will first fade out the loading animation
+      $('#preloader').delay(1600).fadeOut('slow'); // will fade out the white DIV that covers the website.
+      $('dup-body').delay(1600).css({'overflow':'visible'});
       })

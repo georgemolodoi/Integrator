@@ -8,12 +8,12 @@
 /* =================================== */
 ::-moz-selection {
   /* Code for Firefox */
-  background-color: #FBEEC1;
+  background-color: #2E9CCa;
   color: #fff;
 }
 
 ::selection {
-  background-color: #FBEEC1;
+  background-color: #2E9CCa;
   color: #fff;
 }
 
@@ -133,7 +133,7 @@ h4, h5, h6 {
 
 h3 {
   font-family: "Poppins", sans-serif;
-  color: #8D8741;
+  color: #25274D;
   line-height: 1.5em;
   margin-bottom: 0;
   margin-top: 0;
@@ -1934,7 +1934,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #FBEEC1;
+  color: #2e9cca;
 }
 
 .white-menubar .menu-bar span {
@@ -1950,7 +1950,7 @@ nav a:hover {
 }
 
 .dup-body {
-  background: #8d8741;
+  background: #25274D;
 }
 
 .dup-body-wrap {
@@ -1993,7 +1993,7 @@ nav a:hover {
   padding-right: 60px;
   border-radius: 10px;
   background: transparent;
-  border: 1px solid #FBEEC1;
+  border: 1px solid #2e9cca;
   color: #222222;
   display: inline-block;
   font-weight: 500;
@@ -2024,7 +2024,7 @@ nav a:hover {
 }
 
 .primary-btn:hover {
-  background: #FBEEC1;
+  background: #2E9CCA;
   color: #fff;
 }
 
@@ -2044,11 +2044,11 @@ nav a:hover {
 
 .primary-btn.white:hover {
   background: #fff;
-  color: #FBEEC1;
+  color: #2e9cca;
 }
 
 .primary-btn.white:hover span {
-  color: #FBEEC1;
+  color: #2e9cca;
 }
 
 .wrapper {
@@ -2069,7 +2069,7 @@ nav a:hover {
   align-items: center;
   border: 4px solid #FFFFFF;
   overflow: hidden;
-  background-image: linear-gradient(to bottom, #FBEEC1 50%, #FFFFFF 50%);
+  background-image: linear-gradient(to bottom, #2e9cca 50%, #FFFFFF 50%);
   background-size: 100% 200%;
   transition: all 1s;
   color: #FFFFFF;
@@ -2086,7 +2086,7 @@ nav a:hover {
 }
 .wrapper .file-upload:hover {
   background-position: 0 -100%;
-  color: #FBEEC1;
+  color: #2e9cca;
 } 
 
 .analyze-button {
@@ -2095,7 +2095,7 @@ nav a:hover {
   padding-right: 60px;
   border-radius: 10px;
   background: transparent;
-  border: 1px solid #FBEEC1;
+  border: 1px solid #2e9cca;
   color: #222222;
   display: inline-block;
   font-weight: 500;
@@ -2126,7 +2126,7 @@ nav a:hover {
 }
 
 .analyze-button:hover {
-  background: #FBEEC1;
+  background: #2E9CCA;
   color: #fff;
 }
 
@@ -2146,11 +2146,15 @@ nav a:hover {
 
 .analyze-button.white:hover {
   background: #fff;
-  color: #FBEEC1;
+  color: #2e9cca;
 }
 
 .analyze-button.white:hover span {
-  color: #FBEEC1;
+  color: #2e9cca;
+}
+
+.form-submit-button {
+  display: none;
 }
 
 
@@ -2222,7 +2226,7 @@ nav a:hover {
 }
 
 .generic-banner.element-banner {
-  background: #8D8741;
+  background: #25274D;
 }
 
 .generic-banner .height {
@@ -2373,7 +2377,7 @@ nav a:hover {
 }
 
 .achivement-area .single-achivement:hover .achivement-link {
-  background: #8D8741;
+  background: #25274D;
 }
 
 .achivement-area .single-achivement:hover .achivement-link i {
@@ -2420,7 +2424,7 @@ nav a:hover {
 }
 
 .single-progressbar .progress-bar {
-  background: #8D8741;
+  background: #25274D;
   height: 5px;
   line-height: 5px;
 }
@@ -2431,7 +2435,7 @@ nav a:hover {
 }
 
 .carousel-area .overlay-bg {
-  background: #DAAD86;
+  background: #C3073F;
 }
 
 .active-bottle-carousel {
@@ -2552,7 +2556,7 @@ nav a:hover {
   top: 50%;
   transform: translateY(-50%);
   right: 5px;
-  background: #8D8741;
+  background: #25274D;
   color: #fff;
 }
 
@@ -2693,7 +2697,7 @@ nav a:hover {
 }
 
 .footer-social a:hover i {
-  color: #8D8741;
+  color: #25274D;
 }
 
 .about-generic-area {
@@ -2743,7 +2747,7 @@ nav a:hover {
 
 #top-button {
   display: inline-block;
-  background-color: #FBEEC1;
+  background-color: #2E9CCa;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -2764,14 +2768,14 @@ nav a:hover {
   font-style: normal;
   font-size: 2em;
   line-height: 50px;
-  color: #8D8741;
+  color: #25274D;
 }
 #top-button:hover {
   cursor: pointer;
   background-color: #fff;
 }
 #top-button:active {
-  background-color: #8D8741;
+  background-color: #25274D;
 }
 #top-button.show {
   opacity: 1;
@@ -2804,7 +2808,7 @@ nav a:hover {
   height: 100px;
   border-radius: 50%;
   border: 4px solid transparent;
-  border-top: 4px solid #FBEEC1;
+  border-top: 4px solid #C3073F;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
@@ -2821,7 +2825,7 @@ nav a:hover {
   left: 5px;
   right: 5px;
   bottom: 5px;
-  border-top-color: #DAAD86;
+  border-top-color: #2E9CCa;
   -webkit-animation: spin 3s linear infinite;
   animation: spin 3.5s linear infinite;
 }
@@ -2830,7 +2834,7 @@ nav a:hover {
   left: 15px;
   right: 15px;
   bottom: 15px;
-  border-top-color: #8D8741;
+  border-top-color: #25274D;
   -webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.75s linear infinite;
 }
