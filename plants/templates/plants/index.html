@@ -1,0 +1,34 @@
+{% extends 'plants/base.html' %}
+
+{% block site-title %} Disease Detection {% endblock %}
+{% block page-title %} Disease Detection {% endblock %}
+
+{%  block banner-content %}
+<h1>What <br> disease?</h1>
+<p>Disease detection using Deep Learning</p>
+<!-- <a href="#analyzer" class="primary-btn">Analyze<span class="lnr lnr-arrow-right"></span></a> -->
+<form method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+		<div class="wrapper">
+				<div class="file-upload">
+					<input id='file-input' name='myfile' type="file" onchange="window.location.href ='#analyze'; removeHash();"/>
+					<i class="fa fa-arrow-up" style="font-size:20px; color:#25274D;"></i>
+				</div>
+				<button class="form-submit-button" type="submit" name="formSubmit"></button>
+		</div>
+</form>
+{% endblock %}
+																		
+
+{% block carousel-content %}
+<h2 class="text-white">Disease Detection</h2>
+<h5 class="text-white mb-20">with Convolutional Neural Networks</h5>
+<p class="text-white mb-30">Using the RESNET50 architecture we trained a model on a dataset composed by artworks of the most famous 50 painters.</p>
+<!-- <a href="#" class="primary-btn white">View More<span class="lnr lnr-arrow-right"></span></a> -->
+<!-- <button id='analyze-button' class="primary-btn white" type='submit' onclick='analyze(); removeHash(); window.location.href="result.html" '; >Analyze<span class="lnr lnr-arrow-right"></span></a> -->
+<button id='analyze-button' class="primary-btn white" type='submit'>Analyze<span class="lnr lnr-arrow-right"></span></a>
+{% endblock %}
+
+
+{% block slideshow %}
+{% endblock %}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="static/img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="CodePixar">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>{% block site-title %} {% endblock %} </title>
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
+		<!--CSS ============================================= -->
+		<link rel="stylesheet" href="../static/plants/css/linearicons.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">	
+		<link rel="stylesheet" href="../static/plants/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../static/plants/css/nice-select.css">
+		<link rel="stylesheet" href="../static/plants/css/magnific-popup.css">
+		<link rel="stylesheet" href="../static/plants/css/bootstrap.css">
+		<link rel="stylesheet" href="../static/plants/css/main.css">
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="../static/plants/js/jquery-2.1.4.min.js"></script>
+		<script src='../static/plants/js/client.js'></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+	
+	</head>
+
+	<body class="dup-body">
+        {% block preloder %} {% endblock %}
+		<!-- Return to Top -->
+		<a id="top-button"></a>
+		<div class="dup-body-wrap">
+			<!-- Start Header Area -->
+			<header class="default-header">
+				<div class="header-wrap">
+					<div class="header-top d-flex justify-content-between align-items-center">
+						<div class="banner-content">
+							<a href=""onclick="window.location.href ='#home'; removeHash();"><h3>{% block page-title %} {% endblock %}</h3></a>
+						</div>
+						<div class="main-menubar d-flex align-items-center">
+							<nav class="hide">
+								<a href="" onclick="window.location.href ='#home'; removeHash();">Home</a>
+								<a href="">Learn more</a>
+							</nav>
+							<div class="menu-bar"><span class="lnr lnr-menu"></span></div>
+						</div>
+					</div>
+				</div>
+			</header>
+		<!-- End Header Area -->
+
+		<!-- Start Banner Area -->
+		<section class="banner-area relative" id="#home">
+			<div class="overlay overlay-bg"></div>
+			<div class="container">
+				<div class="row fullscreen align-items-center justify-content-between">
+					<div class="col-lg-6 col-md-7 col-sm-8">
+						<div class="banner-content">
+                            {% block banner-content %}	
+                            {%  endblock %}		
+						</div>
+					</div>
+					{%  block slideshow %}
+					{% endblock %}
+				</div>
+			</div>
+		</section>
+		<!-- End Banner Area -->
+
+	<!-- Start Carousel Area -->
+		<section class="section-gap carousel-area" id ="analyze">
+			<div class="overlay overlay-bg"></div>
+			<div class="active-bottle-carousel">
+				<div class="item">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-xl-6 col-md-4">
+								<div class="carousel-thumb">
+									<img src="" alt="" id="profile-img-tag" class="img-fluid2">
+								</div>
+							</div>
+							<div class="col-xl-6 col-md-7">
+								<div class="carousel-content">
+                                        {% block carousel-content %}	
+                                        {%  endblock %}
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- End Carousel Area -->
+
+		<script src="../static/plants/js/vendor/jquery-2.2.4.min.js"></script>
+		<!-- <script src="../https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
+		<script src="../static/plants/js/vendor/bootstrap.min.js"></script>
+		<script src="../static/plants/js/jquery.ajaxchimp.min.js"></script>
+		<script src="../static/plants/js/jquery.nice-select.min.js"></script>
+		<script src="../static/plants/js/jquery.magnific-popup.min.js"></script>
+		<script src="../static/plants/js/main.js"></script>
+	</body>
+</html>

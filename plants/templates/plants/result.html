@@ -1,0 +1,40 @@
+{% extends 'plants/base-result.html' %}
+
+{% block site-title %} Disease Detection {% endblock %}
+
+{% block preloder %} 
+<div id="preloader">
+	<div id="preloader_spinner">
+		<div class="triple-spinner"></div>
+	</div>
+</div>
+{% endblock %}
+
+{% block page-title %} Disease Detection {% endblock %}
+
+{% block results %}
+<section class="section-gap skill-area" id="show-results">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-lg-5">
+					<div class="skill-content">
+						<h2>Predictions</h2>
+						<p class="mb-30">The top 3 most probable diseases are: </p>
+						<!-- <a href="#" class="primary-btn">View More<span class="lnr lnr-arrow-right"></span></a> -->
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="total-progress-bar">
+						{% for name, prob in results %}
+						<h5><p id="result-label">{{name}}</p></h5>
+						<div class="single-progressbar mb-20">
+							<div id="pb" class="progress-bar" role="progressbar" style="width: {{prob}}%;"></div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
