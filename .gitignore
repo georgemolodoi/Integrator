@@ -1,2 +1,4 @@
 # Don't track content of these folders
 artworks/media
+artworks/arts_model.pkl
+plants/plants_model.pkl
