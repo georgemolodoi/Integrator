@@ -83,7 +83,7 @@ except RuntimeError:
 
 tasks = [asyncio.ensure_future(setup_learner())]
 learn = loop.run_until_complete(asyncio.gather(*tasks))[0]
-loop.close()
+# loop.close()
 
 
 def analyze(request):
