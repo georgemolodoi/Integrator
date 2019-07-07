@@ -26,7 +26,7 @@ SECRET_KEY = 'x0gna1q+bco@4&3d*)@2=(f37uz=mekij9telhu-=j)zq47js3'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['georges.work', '188.166.89.215', 'artworks.georges.work', 'plants.georges.work']
+ALLOWED_HOSTS = ['georges.work', '188.166.89.215', '127.0.0.1']
 
 
 # Application definition
@@ -39,8 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    # third party for subdomain
-    'django_hosts',
 
     # my- apps
     'artworks',
@@ -48,7 +46,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django_hosts.middleware.HostsRequestMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -56,12 +53,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django_hosts.middleware.HostsResponseMiddleware'
 ]
 
 ROOT_URLCONF = 'mysite.urls'
-ROOT_HOSTCONF = 'mysite.hosts'
-DEFAULT_HOST = 'www'
 
 TEMPLATES = [
     {
