@@ -2,3 +2,4 @@
 artworks/media
 *.pkl
 *.vscode
+__pycache__/
