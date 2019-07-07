@@ -1,6 +1,6 @@
 Django == 2.2.1
 fastai
-pytorch --no-cache-dir
+pytorch 
 numpy
 aiohttp
 asyncio
