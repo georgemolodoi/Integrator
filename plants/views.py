@@ -62,7 +62,7 @@ async def download_file(url, dest):
             with open(dest, 'wb') as f: f.write(data)
 
 async def setup_learner():
-    await download_file(EXPORT_FILE_URL, PATH/EXPORT_FILE_NAME)
+    download_file(EXPORT_FILE_URL, PATH/EXPORT_FILE_NAME)
     try:
         learn = load_learner(PATH, EXPORT_FILE_NAME)
         return learn
