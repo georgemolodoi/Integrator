@@ -1,0 +1,8 @@
+Django == 2.2.1
+fastai
+pytorch
+numpy
+aiohttp
+asyncio
+django-hosts
+gunicorn
