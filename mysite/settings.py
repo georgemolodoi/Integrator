@@ -26,7 +26,7 @@ SECRET_KEY = 'x0gna1q+bco@4&3d*)@2=(f37uz=mekij9telhu-=j)zq47js3'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['.georges.work', '0.0.0.1', '.mysite.io']
+ALLOWED_HOSTS = ['.georges.work', '0.0.0.1', '.mysite.io', '188.166.89.215']
 
 
 # Application definition
