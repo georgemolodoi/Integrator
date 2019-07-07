@@ -25,7 +25,7 @@ SECRET_KEY = 'x0gna1q+bco@4&3d*)@2=(f37uz=mekij9telhu-=j)zq47js3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mysite.io', 'artworks.mysite.io', 'plants.mysite.io']
+ALLOWED_HOSTS = ['mysite.io', 'artworks.mysite.io', 'plants.mysite.io', '127.0.0.1']
 
 
 # Application definition
