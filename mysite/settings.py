@@ -26,7 +26,7 @@ SECRET_KEY = 'x0gna1q+bco@4&3d*)@2=(f37uz=mekij9telhu-=j)zq47js3'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['georges.work', '188.166.89.215', '127.0.0.1']
+ALLOWED_HOSTS = ['188.166.89.215']
 
 
 # Application definition
@@ -124,6 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_URL = '/media/'
 
