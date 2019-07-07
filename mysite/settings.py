@@ -26,7 +26,7 @@ SECRET_KEY = 'x0gna1q+bco@4&3d*)@2=(f37uz=mekij9telhu-=j)zq47js3'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['.georges.work', '188.166.89.215']
+ALLOWED_HOSTS = ['georges.work', '188.166.89.215', 'artworks.georges.work', 'plants.georges.work']
 
 
 # Application definition
